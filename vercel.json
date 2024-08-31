@@ -1,0 +1,10 @@
+{
+    "headers": [
+      {
+        "source": "/discord-overlay.js",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "*" }
+        ]
+      }
+    ]
+  }
