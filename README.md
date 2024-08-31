@@ -30,7 +30,7 @@ Want to see it in action? Move your cursor out of the browser window (towards th
 
 ## Customization
 
-You can customize the appearance of the overlay modal by overwriting the CSS in the `discord-overlay.js` file to better fit the design of your website.
+You can customize the appearance of the overlay modal by overwriting the CSS of the `discord-overlay.js` file to better fit the design of your website.
 
 **Note:** The overlay will only appear once. To reset it for testing purposes, clear your browser's local storage or use an incognito window.
 
