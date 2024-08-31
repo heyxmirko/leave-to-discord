@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Overlay - Easy Integration Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #5865F2;
+            text-align: center;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border-left: 3px solid #5865F2;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .demo-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #5865F2;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .demo-button:hover {
+            background-color: #4752C4;
+        }
+        .note {
+            background-color: #e6f7ff;
+            border-left: 3px solid #1890ff;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="./discord-overlay.js"></script>
+</head>
+<body>
+    <h1>Discord Overlay Integration Guide</h1>
+    
+    <h2>Quick Start</h2>
+    <p>To add the Discord overlay to your website, follow these simple steps:</p>
+    <ol>
+        <li>Add the following script tag to your HTML file, just before the closing <code>&lt;/body&gt;</code> tag:</li>
+    </ol>
+    <pre><code>&lt;script src="https://leave-to-discord.vercell.app/discord-overlay.js"&gt;&lt;/script&gt;</code></pre>
+    
+    <ol start="2">
+        <li>Initialize the overlay with your Discord invite link:</li>
+    </ol>
+    <pre><code>&lt;script&gt;
+    initDiscordOverlay('https://discord.gg/your-invite-link');
+&lt;/script&gt;</code></pre>
+
+    <h2>Live Demo</h2>
+    <p>Try it out! Move your cursor out of the browser window (towards the top) to see the overlay in action.</p>
+    <a href="#" class="demo-button" id="demo-button">Trigger Demo Overlay</a>
+
+    <h2>Customization</h2>
+    <p>You can customize the appearance of the overlay by modifying the CSS in the <code>discord-overlay.js</code> file.</p>
+
+    <div class="note">
+        <strong>Note:</strong> The overlay will only appear once per session. To reset it for testing, clear your browser's local storage or use an incognito window.
+    </div>
+
+    <script>
+        // Initialize the overlay with a demo invite link
+        initDiscordOverlay('https://discord.gg/demo-link');
+
+        // Add demo button functionality
+        document.getElementById('demo-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const overlay = document.querySelector('.discord-overlay');
+            overlay.style.display = 'block';
+            setTimeout(() => {
+                overlay.classList.add('active');
+            }, 300);
+        });
+    </script>
+</body>
+</html>
